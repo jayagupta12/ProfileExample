@@ -6,7 +6,7 @@ class WeatherHome extends StatefulWidget {
 }
 
 class _WeatherHomeState extends State<WeatherHome> {
-var selected="now";
+  var selected = "now";
 
   @override
   Widget build(BuildContext context) {
@@ -92,6 +92,53 @@ var selected="now";
                   ],
                 ),
               ),
+            ),
+            Column(
+              
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    Container(
+                      child: Column(
+                        children: [
+                          Row(
+                            children: <Widget>[Icon(Icons.cloud), Text("HUMIDITY")],
+                          ),
+                          Text("75%")
+                        ],
+                      ),
+                    ),
+                     Container(
+                      child: Column(
+                        children: [
+                          Row(
+                            children: <Widget>[Icon(Icons.cloud), Text("FEELS LIKE")],
+                          ),
+                          Text("75%")
+                        ],
+                      ),
+                    ),
+                    
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    Container(
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Icon(Icons.cloud),
+                              Text("RAIN")
+                            ],
+                          ),
+                          Text("75%")
+                        ],
+                      ),
+                    )
+                  ],
+                )
+              ],
             )
           ],
         ),
@@ -101,27 +148,29 @@ var selected="now";
 
   Widget dayWidget(String text, String imgpath) {
     return InkWell(
-      onTap: (){
+      onTap: () {
         setState(() {
-          selected=text;
+          selected = text;
         });
       },
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: AnimatedContainer(
-              curve: Curves.linear,
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: AnimatedContainer(
+            curve: Curves.linear,
             duration: Duration(milliseconds: 500),
             decoration: BoxDecoration(
               borderRadius: new BorderRadius.circular(10),
-              color: selected==text?Colors.orange:Colors.white,
+              color: selected == text ? Colors.orange : Colors.white,
             ),
-            
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: <Widget>[
-                  
-                  Text(text,style:TextStyle(color: selected==text?Colors.white:Colors.black),),
+                  Text(
+                    text,
+                    style: TextStyle(
+                        color: selected == text ? Colors.white : Colors.black),
+                  ),
                   Image.asset(
                     imgpath,
                     width: 50,
@@ -130,7 +179,7 @@ var selected="now";
                 ],
               ),
             )),
-          ),
+      ),
     );
   }
 }
