@@ -113,7 +113,7 @@ class _WeatherHomeState extends State<WeatherHome> {
                           Row(
                             children: <Widget>[Icon(Icons.cloud), Text("FEELS LIKE")],
                           ),
-                          Text("75%")
+                          Text("78%")
                         ],
                       ),
                     ),
