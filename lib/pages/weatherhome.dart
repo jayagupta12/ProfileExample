@@ -43,8 +43,7 @@ class _WeatherHomeState extends State<WeatherHome> {
                           fit: BoxFit.fill,
                           colorFilter: new ColorFilter.mode(
                               Colors.black.withOpacity(0.9), BlendMode.dstATop),
-                          image: NetworkImage(
-                              "https://images.wallpaperscraft.com/image/buildings_city_building_top_view_119746_3840x2400.jpg")),
+                          image: NetworkImage("https://images.wallpaperscraft.com/image/buildings_city_building_top_view_119746_3840x2400.jpg")),
                       borderRadius: new BorderRadius.all(Radius.circular(30))),
                   child: new Center(
                       child: Column(
