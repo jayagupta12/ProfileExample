@@ -88,3 +88,25 @@ Widget getSecondContainer(BuildContext context, User user) {
     ),
   );
 }
+
+Widget getAppBar() {
+  return AppBar(
+    title: Center(child: Text("New York")),
+    textTheme: TextTheme(
+      headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+      title: TextStyle(fontSize: 22.0, color: Colors.black),
+    ),
+    backgroundColor: Colors.white,
+    leading: Icon(
+      Icons.dashboard,
+      color: Colors.black,
+    ),
+    actions: <Widget>[
+      Padding(
+        padding: const EdgeInsets.only(right: 16),
+        child: Icon(Icons.search, color: Colors.black),
+      )
+    ],
+    elevation: 0,
+  );
+}
